@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <app-like
+        [favorite]="favorite"
+        (toggleFavorite)="toggleFavoriteHandler($event)"
+    ></app-like>
+    <img [src]="move.urlPoster" alt="poster" class="poster">
+    <div class="film_data">
+        <div class="title">
+            film name: {{move.title}}
+        </div>
+        <div class="data">
+            <div class="line">
+                <span class="line_title">year:</span>
+                <span class="line_value">
+                    {{move.year}}
+                </span>
+            </div>
+            <div class="line">
+                <span class="line_title">rating:</span>
+                <span class="line_value">
+                     {{move.rating}}
+                </span>
+            </div>
+            <div class="line">
+                <span class="line_title">genres:</span>
+                <span class="line_value" *ngFor="let genre of move.genres">{{genre + ' '}} </span>
+            </div>
+            <div class="line">
+                <span class="line_title">country:</span>
+                <span class="line_value" *ngFor="let countrie of move.countries">{{countrie + ' '}}</span>
+            </div>
+            <div class="line">
+                <span class="line_title">director:</span>
+                <a href="{{'https://www.imdb.com/name/' + director.id + '/?ref_=tt_ov_dr'}}" class="line_value" *ngFor="let director of move.directors">{{director.name + ' '}}</a>
+            </div>
+        </div>
+    </div>
+</div>

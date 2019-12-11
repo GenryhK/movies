@@ -1,0 +1,22 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 186px;
+    margin: 24px;
+}
+
+img {
+    width: 200px;
+    height: 268px;
+    border: 1px solid black;
+}
+
+.line_title {
+    margin-right: 12px;
+    color: black;
+}
+
+.line_value {
+    color: #cecece;
+}

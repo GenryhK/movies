@@ -1,0 +1,5 @@
+<div class="wrapper">
+    <app-film [move]="move"
+              (toggleFavorite)="toggleFavoriteHandler($event)"
+              *ngFor="let move of movies"></app-film>
+</div>
